@@ -1,0 +1,49 @@
+# Code scraps
+
+#NLTK practice
+
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+
+stop_words = stopwords.words('english')
+#Adds stuff to our stop wors list
+stop_words.extend(["@","n't",'.',','])
+
+
+def WN_lemmatizer_NLTK(token):
+
+    return WordNetLemmatizer().lemmatize(token)
+
+def tokenizer_NLTK_1(text):
+    #simple version
+    return nltk.word_tokenize(text)
+
+def tokenizer_NLTK_2(text):
+    #a bit more complex
+    #Tokenizes
+    the_tokens = nltk.word_tokenize(text)
+    #Removes Stop_WOrds
+    the_tokens = [token for token in the_tokens if token not in stop_words]
+
+    #Lemmatized the word too
+    #for i in the_tokens:
+        #WN_lemmatizer_NLTK(i)
+
+    the_tokens = [WN_lemmatizer_NLTK for i in the_tokens]
+
+    return the_tokens
+
+#NLKT practice
+
+test_sentence = "Tomorrow is going to be a good day! Shumona is the best!"
+
+tok_sen = nltk.word_tokenize(test_sentence)
+print (nltk.word_tokenize(test_sentence))
+
+type(tok_sen)
+
+for i in tok_sen:
+    WN_lemmatizer_NLTK(i)
+
+    tok_sen
