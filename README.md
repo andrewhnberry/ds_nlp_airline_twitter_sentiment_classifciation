@@ -3,6 +3,8 @@
 ### Project
 My take on the classic kaggle dataset of tweets towards various airlines, within the dataset we are provided with the tweet itself as well as the labeled sentiment too that tweet. With that information available, I wanted to produce a few basic machine learning models to predict that sentiment accuratley. 
 
+Link: https://www.kaggle.com/crowdflower/twitter-airline-sentiment
+
 ### Purpose 
 This is a personal project, I really wanted to explore my data science skills, understand deeper the various machine learning algortihims, as well as to imporve on my data analysis work
 
